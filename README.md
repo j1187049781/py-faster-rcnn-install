@@ -8,8 +8,11 @@ http://caffe.berkeleyvision.org/install_apt.html
 ### 修改makefile
 https://github.com/rbgirshick/py-faster-rcnn#requirements-software
 ### Anaconda3内安装其他依赖库
+0. for req in $(cat requirements.txt); do pip install $req; done
 1. conda install scikit-image hdf5 h5py
 2. conda install -c menpo opencv3=3.1.0
 3. conda install protobuf
 ### Error: no pyconfig.h
 CPLUS_INCLUDE_PATH = /home/lab/anaconda2/include/python3.6m/
+### No GPU
+https://www.cnblogs.com/justinzhang/p/5386837.html
