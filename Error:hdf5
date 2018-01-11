@@ -1,24 +1,22 @@
-“fatal error: hdf5.h: 没有那个文件或目录”解决方法
+# “fatal error: hdf5.h: 没有那个文件或目录”解决方法
 
 参考自http://blog.csdn.net/hongye000000/article/details/51043913
-Step 1
+## Step 1
 
 在Makefile.config文件的第85行，添加/usr/include/hdf5/serial/ 到 INCLUDE_DIRS，也就是把下面第一行代码改为第二行代码。
 
 INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include
 
-    1
 
-INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial/
+INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial
 
-    1
-
-Step 2
+## Step 2
 
 在Makefile文件的第173行，把 hdf5_hl 和hdf5修改为hdf5_serial_hl 和 hdf5_serial，也就是把下面第一行代码改为第二行代码。
 
 LIBRARIES += glog gflags protobuf boost_system boost_filesystem m hdf5_hl hdf5
-
-    1
-
 LIBRARIES += glog gflags protobuf boost_system boost_filesystem m hdf5_serial_hl hdf5
+
+## step 3
+cd /usr/lib/x86_64-linux-gnu
+sudo ln -s libhdf5_serial.so.100.0.1 libhdf5.so
