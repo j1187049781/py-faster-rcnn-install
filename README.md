@@ -4,13 +4,9 @@ ubuntu>=17 sudo apt build-dep caffe-cpu    # dependencies for CPU-only version
 ##  编译环境 step 2
 ### 安装依赖
 http://caffe.berkeleyvision.org/install_apt.html
-### 修改makefile
-https://github.com/rbgirshick/py-faster-rcnn#requirements-software
-###安装其他依赖库
-0. for req in $(cat requirements.txt); do pip install $req; done
-1. 
-2. 
-3. 
+### 安装其他依赖库
+1. for req in $(cat requirements.txt); do pip install $req; done
+## 编译
 ### No GPU
 https://www.cnblogs.com/justinzhang/p/5386837.html
 1. /py-faster-rcnn/lib/fast_rcnn/config.py
@@ -40,3 +36,14 @@ ext_modules = [
     ),
 ]
 ```
+### 修改makefile
+1. https://github.com/rbgirshick/py-faster-rcnn#requirements-software
+2. https://github.com/j1187049781/py-faster-rcnn-install/blob/master/Error:hdf5
+3. sudo apt-get install python-numpy
+## for run demo
+1. sudo pip install easydict
+2. sudo pip install opencv-python
+3. nms_wraper.py -->no nms_gpu
+4. sudo apt-get install python-tk
+5. download model  https://github.com/rbgirshick/py-faster-rcnn#requirements-software
+6. python demo.py --cpu
