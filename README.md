@@ -1,7 +1,6 @@
 # py-faster-rcnn-install
 ## 编译环境 step 1 
-ubuntu>=17 sudo apt install caffe-cpu
-或者 用 sudo apt build-dep caffe-cpu        # dependencies for CPU-only version
+ubuntu>=17 sudo apt build-dep caffe-cpu    # dependencies for CPU-only version
 ##  编译环境 step 2
 ### 安装依赖
 http://caffe.berkeleyvision.org/install_apt.html
