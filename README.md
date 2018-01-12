@@ -18,7 +18,7 @@ https://www.cnblogs.com/justinzhang/p/5386837.html
     __C.USE_GPU_NMS = False
 2. 将 ~/py-faster-rcnn/tools/test_net.py和 ~/py-faster-rcnn/tools/train_net.py的caffe.set_mode_gpu()修改为caffe.set_mode_cpu()
 3. 将~/py-faster-rcnn/lib/setup.py中，含有'nms.gpu_nms’的部分去掉，去掉后的内容如下
-''' 
+```python
 ext_modules = [
     Extension(
         "utils.cython_bbox",
@@ -40,4 +40,4 @@ ext_modules = [
             'gcc': ['-Wno-cpp', '-Wno-unused-function', '-std=c99']},
     ),
 ]
-'''
+```
