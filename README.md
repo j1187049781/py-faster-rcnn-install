@@ -39,7 +39,11 @@ ext_modules = [
 ### 修改makefile
 1. https://github.com/rbgirshick/py-faster-rcnn#requirements-software
 2. https://github.com/j1187049781/py-faster-rcnn-install/blob/master/Error:hdf5
-3. sudo apt-get install python-numpy
+3. 在Makefile.config找到PYTHON_INCLUDE：  
+PYTHON_INCLUDE := /usr/include/python2.7 \  
+        /usr/lib/python2.7/dist-packages/numpy/core/include  
+add this:  
+        /usr/local/lib/python2.7/dist-packages/numpy/core/include  
 ## for run demo
 1. sudo pip install easydict
 2. sudo pip install opencv-python
